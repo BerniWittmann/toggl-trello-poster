@@ -1,0 +1,11 @@
+{
+  "TRELLO_APP_KEY": "trello-app-key",
+  "TRELLO_API_TOKEN": "trello-api-token",
+  "TRELLO_LIST_ID": "trello-list-id the list to be posted to",
+  "DROPBOX_ACCESS_TOKEN": "dropbox-access-token",
+  "TOGGL_AUTH_USERNAME": "toggl-api-username",
+  "TOGGL_AUTH_PASSWORD": "toggl-api-password",
+  "TOGGL_PROJECT_IDS": "toggl-project-ids comma separated",
+  "TOGGL_WORKSPACE_ID": "toggl-workspace-id",
+  "MOMENT_FORMAT": "DD.MM.YYYY"
+}
