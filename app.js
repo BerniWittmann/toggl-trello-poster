@@ -14,17 +14,16 @@ function errorHandler(desc, error) {
 
 var config = require('./config.json') || {};
 
-if (!config.TOGGL_DATE_FORMAT) {
-    config.TOGGL_DATE_FORMAT = 'YYYY-MM-DD';
-}
+config.TOGGL_DATE_FORMAT = 'YYYY-MM-DD';
 
 if (!config.MOMENT_FORMAT) {
     config.MOMENT_FORMAT = 'DD.MM.YYYY';
 }
 
 var until = moment().day('SUNDAY');
-if (process.env.until) {
-    until = moment(process.env.until, config.MOMENT_FORMAT, true);
+var passedInUntilDate = process.env.until || config.until;
+if (passedInUntilDate) {
+    until = moment(passedInUntilDate, config.MOMENT_FORMAT, true);
     if (!until.isValid()) {
         return errorHandler('Given until date is not valid', undefined);
     }
@@ -32,8 +31,9 @@ if (process.env.until) {
 
 var since = until.clone().subtract(6, 'd');
 
-if (process.env.since) {
-    since = moment(process.env.since, config.MOMENT_FORMAT, true);
+var passedInSinceDate = process.env.since || config.since;
+if (passedInSinceDate) {
+    since = moment(passedInSinceDate, config.MOMENT_FORMAT, true);
     if (!since.isValid()) {
         return errorHandler('Given since date is not valid', undefined);
     }
