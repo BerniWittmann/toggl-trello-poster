@@ -59,14 +59,14 @@ You have two methods to configure the script
     * Obtain your Toggl API Token from your Toggl Profile and use it as *TOGGL_AUTH_USERNAME*
     * Usually the *TOGGL_AUTH_PASSWORD* is `api_token`
     * Get your Workplace ID and put it in *TOGGL_WORKSPACE_ID* 
-    * Get the Project IDs which you want to be included in the report (comma-separated) e.g. 1123,5813
+    * Get the Project IDs which you want to be included in the report (comma-separated) e.g. 1123,5813 for usage in *TOGGLE_PROJECT_IDS*
   
 
 ## Usage
 
 Usually the script gets the report from last week's monday to sunday.
 
-But you can set the date range manually by passing the parameters `since` and `until` to the script in the given *MOMENT_FORMAT* (By default DD.MM.YYYY). This can be achieved either by adding it to `config.json or passing it in as an environment variable.
+But you can set the date range manually by passing the parameters `since` and `until` to the script in the given *MOMENT_FORMAT* (By default DD.MM.YYYY`). This can be achieved either by adding it to `config.json` or passing it in as an environment variable (See [Configuration Method 2](#configuration)).
 
 ## Contribution
 
