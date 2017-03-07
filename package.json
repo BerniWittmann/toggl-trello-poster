@@ -1,0 +1,15 @@
+{
+  "name": "toggl-time-script",
+  "version": "1.0.0",
+  "author": "BerniWittmann",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "dropbox": "^2.5.2",
+    "moment": "^2.17.1",
+    "request": "^2.80.0",
+    "trello": "^0.7.0"
+  }
+}
